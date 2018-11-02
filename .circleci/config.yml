@@ -40,7 +40,8 @@ jobs:
       - checkout
       - run: sudo pip install flake8 codecov pep8-naming flake8-future-import
       - run: sudo python setup.py install
-      - run: sudo make lint
+      # Waiting for https://github.com/cloudtools/stacker/pull/679 to be merged
+      #- run: sudo make lint
 
   unit-test-27:
     docker:
